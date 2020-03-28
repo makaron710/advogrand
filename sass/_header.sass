@@ -1,0 +1,125 @@
+header
+  padding-top: 50px
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  background: #fff
+.navigation
+  max-height: 50px
+  padding-top: 10px
+  padding-bottom: 10px
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: space-between
+  &__phone
+    position: relative
+    margin-right: 62px
+    &::before
+      content: ''
+      position: absolute
+      left: -14px
+      width: 14px
+      height: 14px
+      background: url('../img/header/phone-call.svg')
+      opacity: 0
+      transition: all 0.2s
+    &:hover
+      &::before
+        opacity: 1
+  &__menu
+  &__button
+    margin-left: 37px
+    width: 140px
+    height: 30px
+  &_fixed
+    border-bottom: 1px solid #f4f4f4
+    position: fixed
+    width: 100%
+    top: 0
+    background: #fff
+
+.menu
+  display: flex
+  flex: 1
+  &__list
+    list-style: none
+    padding: 0
+    margin: 0
+    display: flex
+    flex: 1
+    justify-content: space-between
+    li
+      display: inline
+      color: #1c1c1c
+      font-family: "ProximaNova-Semibold"
+      font-size: 14px
+      line-height: 22px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        left: 0
+        top: 18px
+        width: 0
+        height: 1px
+        background: #1c1c1c
+        transition: all 0.2s
+      &:hover
+        &::after
+          width: 100%
+    
+
+.phone
+  font-family: 'ProximaNova-Black'
+  font-size: 14px
+  letter-spacing: 0.14px
+
+.information
+  max-height: 80px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 20px
+  padding-bottom: 20px
+  &__logo
+    width: 190px
+    height: 40px
+  &__text
+    font-family: 'ProximaNova'
+    font-size: 14px
+    line-height: 22px
+    letter-spacing: 0.14px
+  &__contacts
+    display: flex
+    align-items: center
+    &__phone
+      font-size: 18px
+      line-height: 22px
+      letter-spacing: 0.18px
+      margin-right: 30px
+    &__android-app,
+    &__ios-app
+      width: 40px
+      height: 40px
+      border-radius: 5px
+      border: 1px solid #e42626
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 22px
+        height: 22px
+    &__android-app
+      margin-right: 10px
+
+
+
+@media screen and ( max-width: 991px )
+  .navigation
+    &__phone
+      &:hover
+        &::before
+          display: none
+  
